@@ -1,0 +1,19 @@
+data:
+    image: busybox
+    volumes:
+        - /root/.composer
+        - ~/.ssh/id_rsa_pswd_less:/root/.ssh/id_rsa:ro
+        - ~/.ssh/known_hosts:/root/.ssh/known_hosts:rw
+        - ~/.composer/auth.json:/root/.composer/auth.json:rw
+        - ./app:/app:rw
+    command: "true"
+
+
+app:
+    hostname: flask.dev
+    domainname: flask.dev
+    image: 34bce55891bd
+    environment:
+        VIRTUAL_HOST: flask.dev
+    volumes_from:
+        - data
