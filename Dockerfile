@@ -153,6 +153,14 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 EXPOSE 80 443
 # Finished setting up Nginx
 
+# Install CertBot
+RUN apt-get update \
+	&& apt-get install software-properties-common \
+	&& add-apt-repository ppa:certbot/certbot \
+	&& apt-get update \
+	&& apt-get install python-certbot-nginx \
+	&& certbot --nginx
+ 
 # Make NGINX run on the foreground
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 # Remove default configuration from Nginx
