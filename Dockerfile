@@ -177,6 +177,11 @@ CMD ["/usr/bin/supervisord"]
 
 RUN pip install flask
 RUN pip install flask-restful
+RUN pip install pymongo
+RUN pip install redis
+RUN pip install mysql-connector-python-rf
+RUN pip install python-memcached
+RUN pip install python-telegram-bot
 
 # Which uWSGI .ini file should be used, to make it customizable
 ENV UWSGI_INI /app/uwsgi.ini
