@@ -192,6 +192,7 @@ RUN pip install twilio
 RUN pip install pywhatsapp yowsup2
 RUN pip install viberbot
 RUN pip install flask-compress
+RUN pip install slackclient
 
 
 # Which uWSGI .ini file should be used, to make it customizable
