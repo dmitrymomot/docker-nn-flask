@@ -191,6 +191,7 @@ RUN apt-get update && apt-get install -y python-pyaudio && pip install apiai
 RUN pip install twilio
 RUN pip install pywhatsapp yowsup2
 RUN pip install viberbot
+RUN pip install flask-compress
 
 
 # Which uWSGI .ini file should be used, to make it customizable
