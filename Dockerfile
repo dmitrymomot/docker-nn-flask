@@ -182,6 +182,16 @@ RUN pip install redis
 RUN pip install mysql-connector-python-rf
 RUN pip install python-memcached
 RUN pip install python-telegram-bot
+RUN pip install Flask-Cache
+RUN pip install Flask-Babel
+RUN pip install flask-security flask-sqlalchemy flask-mongoengine
+RUN pip install vk
+RUN pip install pyowm
+RUN apt-get update && apt-get install -y python-pyaudio && pip install apiai
+RUN pip install twilio
+RUN pip install pywhatsapp yowsup2
+RUN pip install viberbot
+
 
 # Which uWSGI .ini file should be used, to make it customizable
 ENV UWSGI_INI /app/uwsgi.ini
