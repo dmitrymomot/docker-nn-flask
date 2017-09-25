@@ -183,24 +183,50 @@ ENV NGINX_MAX_UPLOAD 0
 
 CMD ["/usr/bin/supervisord"]
 
+RUN apt-get update && apt-get install -y python-pyaudio && pip install apiai
+
+RUN pip install astroid
+RUN pip install Babel
+RUN pip install blinker
+RUN pip install colorama
 RUN pip install flask
 RUN pip install flask-restful
 RUN pip install pymongo
 RUN pip install redis
 RUN pip install mysql-connector-python-rf
+RUN pip install pymysql
 RUN pip install python-memcached
 RUN pip install python-telegram-bot
 RUN pip install Flask-Cache
 RUN pip install Flask-Babel
+RUN pip install Flask-Compress
+RUN pip install Flask-Login
+RUN pip install Flask-Mail
+RUN pip install Flask-Principal
+RUN pip install Flask-WTF
 RUN pip install flask-security flask-sqlalchemy flask-mongoengine
 RUN pip install vk
 RUN pip install pyowm
-RUN apt-get update && apt-get install -y python-pyaudio && pip install apiai
 RUN pip install twilio
 RUN pip install pywhatsapp yowsup2
 RUN pip install viberbot
-RUN pip install flask-compress
 RUN pip install slackclient
+RUN pip install healthcheck
+RUN pip install itsdangerous
+RUN pip install Jinja2
+RUN pip install logilab-common
+RUN pip install MarkupSafe
+RUN pip install nose
+RUN pip install passlib
+RUN pip install pylint
+RUN pip install pytz
+RUN pip install requirements
+RUN pip install six
+RUN pip install speaklater
+RUN pip install SQLAlchemy
+RUN pip install Werkzeug
+RUN pip install wheel
+RUN pip install WTForms
 
 
 # Which uWSGI .ini file should be used, to make it customizable
