@@ -96,6 +96,7 @@ RUN apt-get install -y software-properties-common && \
     apt-get update && \
     apt-get install -y cmake git
 RUN pip install cython
+RUN pip install pyopenssl
 
 RUN git clone https://github.com/Theano/libgpuarray.git && \
     cd libgpuarray && mkdir Build && cd Build && \
