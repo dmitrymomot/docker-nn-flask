@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER Dmitry Momot <mail@dmomot.com>
 
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN apt-get update && apt-get install -y python-mpltoolkits.basemap
 
 RUN NVIDIA_GPGKEY_SUM=d1be581509378368edeec8c1eb2958702feedf3bc3d17011adbf24efacce4ab5 && \
