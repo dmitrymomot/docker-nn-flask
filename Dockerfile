@@ -75,6 +75,7 @@ RUN apt-get update && apt-get install -y \
     python-scipy \
     python-dev \
     python-nose \
+    python-mysqldb \
     g++ \
     libopenblas-dev \
     git \
