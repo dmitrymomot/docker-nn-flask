@@ -96,7 +96,6 @@ RUN apt-get install -y software-properties-common && \
     apt-get update && \
     apt-get install -y cmake git
 RUN pip install cython
-RUN pip install pyopenssl
 
 RUN git clone https://github.com/Theano/libgpuarray.git && \
     cd libgpuarray && mkdir Build && cd Build && \
@@ -230,6 +229,11 @@ RUN pip install SQLAlchemy
 RUN pip install Werkzeug
 RUN pip install wheel
 RUN pip install WTForms
+
+
+# fixes trouble with openssl
+RUN pip uninstall -y pyopenssl
+RUN pip install pyopenssl
 
 
 # Which uWSGI .ini file should be used, to make it customizable
